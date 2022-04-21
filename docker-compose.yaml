@@ -4,7 +4,7 @@ services:
   ha-monitor-api:
     container_name: ha-monitor-api
     image: bushrangers/ha-monitor-api:latest
-    restart: always
+    restart: unless-stopped
     privileged: true
     # The network mode needs to be 'host' for us to get the ethernet/wifi adapter stats.
     network_mode: host

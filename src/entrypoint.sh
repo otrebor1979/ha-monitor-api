@@ -1,4 +1,5 @@
 #!/bin/sh
 
 echo "Starting API..."
-npm start 
+#npm start 
+npm run start-debug
