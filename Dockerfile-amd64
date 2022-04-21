@@ -9,6 +9,7 @@ COPY src/ /opt/monitor-api
 RUN cd /opt/monitor-api && \
     apk update && \
     apk add curl && \
+    apk add --update lm-sensors && \
     npm install --only=prod
 
 # Use in conjunction with Docker "Autoheal" -- https://hub.docker.com/r/willfarrell/autoheal/
