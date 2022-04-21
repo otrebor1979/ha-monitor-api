@@ -6,6 +6,7 @@
 # Setup multi-architecture docker..
 docker manifest create --amend bushrangers/ha-monitor-api \
     bushrangers/ha-monitor-api:arm32v6 \
+    bushrangers/ha-monitor-api:arm32v7 \
     bushrangers/ha-monitor-api:arm64v8 \
     bushrangers/ha-monitor-api:amd64
 
@@ -14,11 +15,13 @@ docker manifest push bushrangers/ha-monitor-api:latest
 # Build with:
 
 # docker build --no-cache -t bushrangers/ha-monitor-api:arm32v6 -f Dockerfile-arm32v6 .
+# docker build --no-cache -t bushrangers/ha-monitor-api:arm32v7 -f Dockerfile-arm32v7 .
 # docker build --no-cache -t bushrangers/ha-monitor-api:arm64v8 -f Dockerfile-arm64v8 .
 # docker build --no-cache -t bushrangers/ha-monitor-api:amd64 -f Dockerfile-amd64 .
 
 # Push with:
 
 # docker push bushrangers/ha-monitor-api:arm32v6
+# docker push bushrangers/ha-monitor-api:arm32v7
 # docker push bushrangers/ha-monitor-api:arm64v8
 # docker push bushrangers/ha-monitor-api:amd64
