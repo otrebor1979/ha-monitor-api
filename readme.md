@@ -1,6 +1,11 @@
 # Home Assistant - Monitoring API
 
-Welcome to the lightweight "ha-monitor-api" project! 
+Welcome to the lightweight "ha-monitor-api" project!
+
+This is mine fork of the original [`ned-kelly/ha-monitor-api`](https://github.com/ned-kelly/ha-monitor-api) project, merged with
+* something from [`cazbrat/ha-monitor-api`](https://github.com/cazbrat/ha-monitor-api) fork project
+* something from [`andreasbrett/ha-monitor-api`](https://github.com/andreasbrett/ha-monitor-api) fork project
+* something from my own :)
 
 This is a quick-and-dirty lightweight API _(knocked out in an evening)_ designed to expose the system's current metrics _(such as disk, network, cpu/temperature etc)_ as a simple JSON endpoint that your Home Assistant instance can query.
 
@@ -30,7 +35,7 @@ It's pretty straightforward, just clone down the sources and stand up the contai
 
 ```bash
 # Clone down sources on the host you want to monitor...
-git clone https://github.com/ned-kelly/ha-monitor-api /opt/ha-monitor-api
+git clone https://github.com/otrebor1979/ha-monitor-api /opt/ha-monitor-api
 cd /opt/ha-monitor-api
 
 # Stand up the container
