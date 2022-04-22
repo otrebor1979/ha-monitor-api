@@ -7,6 +7,7 @@ const https = require("https");
 const auth = require("http-auth");
 const authConnect = require("http-auth-connect")
 const fs = require("fs");
+
 let Sequence = exports.Sequence || require('sequence').Sequence, sequence = Sequence.create(), err;
 
 const LISTEN_PORT = process.env.LISTEN_PORT || 9999;
@@ -14,6 +15,8 @@ const TLS_CRT = process.env.TLS_CRT || "";
 const TLS_KEY = process.env.TLS_KEY || "";
 const AUTH_REALM = process.env.AUTH_REALM || "";
 const AUTH_DIGESTFILE = process.env.AUTH_DIGESTFILE || "";
+
+let MSG_DIGEST;
 
 // disable "powered-by" HTTP header to hide that this is an Express server
 app.disable("x-powered-by");
